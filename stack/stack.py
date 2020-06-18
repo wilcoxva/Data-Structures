@@ -15,32 +15,21 @@ from singly_linked_list import LinkedList
 class Stack:
     def __init__(self):
         self.size = 0
-        self.storage = []
-
-    def __str__(self):
-        return f'{self.storage}'
+        self.storage = LinkedList()
 
     def __len__(self):
-        return len(self.storage)
+        return self.size
 
     def push(self, value):
-        return self.storage.append(value)
+        self.size += 1
+        self.storage.add_to_head(value)
 
     def pop(self):
-        if len(self.storage) > 0:
-            return self.storage.pop()
-
-stack = Stack(LinkedList)
-
-
-
-
-
-
-
-
-
-
+        if self.size > 0:
+            var = self.storage.head.value
+            self.size -= 1
+            self.storage.remove_head()
+            return var
 
 
 # class Stack:
