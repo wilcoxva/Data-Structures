@@ -44,11 +44,11 @@ class Stack:
 #         return len(self.storage)
 
 #     def push(self, value):
-#         return self.storage.append(value)
+#         return self.storage.insert(0, value)
 
 #     def pop(self):
 #         if len(self.storage) > 0:
-#             return self.storage.pop()
+#             return self.storage.pop(0)
 
 # stack = Stack()
 
